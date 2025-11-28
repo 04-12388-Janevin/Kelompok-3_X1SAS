@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff6fb;
+  color: #444;
+  overflow-y: auto;   /* ✅ scrolling enabled */
+}
+
+/* SPLASH SCREEN */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ffd6e8, #e4f1ff, #fff7d6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Logo text */
+.logo {
+  font-size: 52px;
+  color: #ff8fb1;
+  margin-bottom: 30px;
+  animation: floatIn 2s ease;
+}
+
+/* Sparkles container */
+.sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.sparkles span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 10px white;
+  animation: sparkle 2.5s infinite ease-in-out;
+}
+
+/* Sparkle positions */
+.sparkles span:nth-child(1) { top: 20%; left: 30%; }
+.sparkles span:nth-child(2) { top: 40%; left: 60%; }
+.sparkles span:nth-child(3) { top: 70%; left: 20%; }
+.sparkles span:nth-child(4) { top: 10%; left: 80%; }
+.sparkles span:nth-child(5) { top: 60%; left: 50%; }
+.sparkles span:nth-child(6) { top: 30%; left: 10%; }
+.sparkles span:nth-child(7) { top: 80%; left: 70%; }
+.sparkles span:nth-child(8) { top: 50%; left: 85%; }
+.sparkles span:nth-child(9) { top: 25%; left: 45%; }
+
+/* Animations */
+@keyframes sparkle {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.8); opacity: 1; }
+}
+
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Homepage layout */
+.home-content {
+  padding: 60px 20px;
+  text-align: center;
+}

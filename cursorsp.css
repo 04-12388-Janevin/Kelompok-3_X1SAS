@@ -1,0 +1,33 @@
+.star {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  pointer-events: none;
+  animation: sparkleFade 0.8s ease-out forwards;
+  box-shadow: 0 0 8px #ffd6ff, 0 0 12px #cce7ff;
+  z-index: 9999;
+}
+
+@keyframes sparkleFade {
+  from {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2) rotate(180deg);
+    opacity: 0;
+  }
+}
